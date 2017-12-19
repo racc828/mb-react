@@ -3,7 +3,7 @@ import AddToDepartment from './AddToDepartment'
 import DepartmentDataAdapter from '../adapters/DepartmentDataAdapter'
 
 
-export default class Finance extends React.Component {
+export default class Operations extends React.Component {
   constructor() {
     super()
     this.state = {
@@ -13,7 +13,7 @@ export default class Finance extends React.Component {
   }
 
   componentDidMount() {
-    DepartmentDataAdapter.getData("finance")
+    DepartmentDataAdapter.getData("operations")
     .then((data) => {
       this.setState({
         departmentData: data
@@ -22,7 +22,7 @@ export default class Finance extends React.Component {
   }
 
   ComponentWillReceiveProps() {
-    DepartmentDataAdapter.getData("finance")
+    DepartmentDataAdapter.getData("operations")
     .then((data) => {
       this.setState({
         departmentData: data
@@ -38,7 +38,7 @@ export default class Finance extends React.Component {
   }
 
   addData = (data) => {
-    DepartmentDataAdapter.addData(data, this.props.currentUser.id, "finance")
+    DepartmentDataAdapter.addData(data, this.props.currentUser.id, "operations")
     .then((newData) => {
       this.setState({
         departmentData: [...this.state.departmentData, data]
@@ -51,8 +51,8 @@ export default class Finance extends React.Component {
     return(
       <div className="main-body">
         <div className="body-inner">
-          <h5>Finance
-            {this.props.currentUser.department == "finance" || this.props.currentUser.department == "all" ?
+          <h5>Operations
+            {this.props.currentUser.department == "operations" || this.props.currentUser.department == "all" ?
               <span><i onClick={this.showAddForm} className="fa fa-plus"></i></span> :
               null
             }

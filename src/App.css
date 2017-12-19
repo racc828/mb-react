@@ -33,8 +33,9 @@ nav {
   min-height:0;
 }
 
-.collapsible-header:after {
-  content:'>';
+.collapsible-header:before {
+  font-family:FontAwesome;
+  content:'\f0d7';
   float:right;
 }
 

@@ -11,18 +11,17 @@ export default class AddToDepartment extends React.Component {
 
 
   handleChange = (e) => {
-    // let property = e.target.name
-    // let value = e.target.value
-    // this.setState({
-    //   [property]: value
-    // })
+    let property = e.target.name
+    let value = e.target.value
+    this.setState({
+      [property]: value
+    })
   }
 
   handleSubmit = (e) => {
-    // debugger
     e.preventDefault()
-    // let data = this.state
-    // this.props.addData(data)
+    let data = this.state
+    this.props.addData(data)
   }
 
 

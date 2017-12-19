@@ -44,11 +44,11 @@ export default class SideNavigation extends React.Component {
                 <CollapsibleItem header='Departments'>
                   <li className="active-link"><NavLink to="/credit">Credit</NavLink></li>
                   <li className="active-link"><NavLink to="/finance">Finance</NavLink></li>
-                  <li>Human Resources</li>
-                  <li>Marketing</li>
-                  <li>MIS</li>
-                  <li>Operations</li>
-                  <li>Sales</li>
+                  <li className="active-link"><NavLink to="/humanresources">Human Resources</NavLink></li>
+                  <li className="active-link"><NavLink to="/marketing">Marketing</NavLink></li>
+                  <li className="active-link"><NavLink to="/mis">MIS</NavLink></li>
+                  <li className="active-link"><NavLink to="/operations">Operations</NavLink></li>
+                  <li className="active-link"><NavLink to="/sales">Sales</NavLink></li>
                 </CollapsibleItem>
                 <CollapsibleItem header='Forms'>
                   <li>Employee Process Change Form</li>

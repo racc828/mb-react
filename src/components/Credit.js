@@ -12,6 +12,24 @@ export default class Credit extends React.Component {
     }
   }
 
+  componentDidMount() {
+    DepartmentDataAdapter.getData("credit")
+    .then((data) => {
+      this.setState({
+        departmentData: data
+      })
+    })
+  }
+
+  ComponentWillReceiveProps() {
+    DepartmentDataAdapter.getData("credit")
+    .then((data) => {
+      this.setState({
+        departmentData: data
+      })
+    })
+  }
+
 
   showAddForm = (e) => {
     this.setState({
@@ -20,9 +38,11 @@ export default class Credit extends React.Component {
   }
 
   addData = (data) => {
-    DepartmentDataAdapter.addData(data)
+    DepartmentDataAdapter.addData(data, this.props.currentUser.id, "credit")
     .then((newData) => {
-      departmentData: [...this.state.departmentData, data]
+      this.setState({
+        departmentData: [...this.state.departmentData, data]
+      })
     })
   }
 
@@ -37,9 +57,9 @@ export default class Credit extends React.Component {
               null
             }
           </h5>
-          {this.state.showAddForm ? <AddToDepartment addData={this.addData} /> : null}
+          {this.state.showAddForm ? <AddToDepartment currentUser={this.props.currentUser} addData={this.addData} /> : null}
           {this.state.departmentData.map((data) => {
-            <p> {data} </p>
+            return <p> {data.description} </p>
           })}
         </div>
       </div>

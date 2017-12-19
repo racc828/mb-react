@@ -1,5 +1,5 @@
-// const path = 'https://mb-backend.herokuapp.com/api/v1/departmentdatum'
-const path = 'http://localhost:3000/api/v1/departmentdatum'
+const path = 'https://mb-backend.herokuapp.com/api/v1/departmentdatum'
+// const path = 'http://localhost:3000/api/v1/departmentdatum'
 
 export default class DepartmentDataAdapter {
 

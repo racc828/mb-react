@@ -14,6 +14,7 @@ export default class TopNavigation extends React.Component {
           {this.props.currentUser.firstname ?
             <span>
               <a onClick={this.props.logOut}>Log Out</a>
+              <a><i className="fa fa-user"></i> {this.props.currentUser.firstname}</a>
             </span>
             :
           <span>

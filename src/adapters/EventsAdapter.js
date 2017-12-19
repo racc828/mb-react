@@ -1,4 +1,5 @@
-const path = 'http://localhost:3000/api/v1/events'
+const path = 'https://mb-backend.herokuapp.com/api/v1/events'
+// const path = 'http://localhost:3000/api/v1/events'
 
 export default class EventsAdapter {
 

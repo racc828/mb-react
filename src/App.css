@@ -34,7 +34,7 @@ nav {
 }
 
 .collapsible-header:after {
-  content:"v";
+  content:'>';
   float:right;
 }
 
@@ -107,8 +107,30 @@ nav {
   margin:auto;
 }
 
+nav ul a {
+  display:inline-block;
+}
+
+.fa-plus {
+  margin-left:10px;
+}
+
+.body-inner {
+  width:98%;
+  margin:0 auto;
+}
+
 .collapsible .active {
   border-left:4px solid #35b44b;
+}
+
+.active-link a {
+  color:#000;
+}
+
+.active-link .active {
+  border-left:none!important;
+  color:#35b44b;
 }
 
 .collapsible-header.active {

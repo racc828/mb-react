@@ -8,6 +8,8 @@ import Main from './components/Main'
 import Login from './components/Login'
 import TopNavigation from './components/TopNavigation'
 import SessionsAdapter from './adapters/SessionsAdapter'
+import Credit from './components/Credit'
+import Finance from './components/Finance'
 
 class App extends Component {
 
@@ -44,6 +46,18 @@ class App extends Component {
     )
   }
 
+  renderCredit = () => {
+    return(
+      <Credit currentUser={this.state.currentUser} />
+    )
+  }
+
+  renderFinance = () => {
+    return(
+      <Finance currentUser={this.state.currentUser} />
+    )
+  }
+
   getUser = (user) => {
   return SessionsAdapter.getUser(user)
   .then( (userData) => {
@@ -62,6 +76,10 @@ class App extends Component {
     debugger
     if(this.state.currentUser.admin) {
       this.context.router.history.push('/')
+    } else if (this.state.currentUser.admin == false) {
+      this.context.router.history.push('/')
+    } else {
+
     }
   })
 
@@ -83,6 +101,8 @@ logOut = () => {
         <TopNavigation currentUser={this.state.currentUser} logOut={this.logOut} />
         <Route exact path="/" render={this.renderMain}/>
         <Route exact path="/login" render={this.renderLogin}/>
+        <Route exact path="/credit" render={this.renderCredit}/>
+        <Route exact path="/finance" render={this.renderFinance}/>
       </div>
     );
   }

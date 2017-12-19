@@ -2,6 +2,7 @@ import React from 'react'
 import MobileSideNav from './MobileSideNav'
 import {Collapsible, CollapsibleItem} from 'react-materialize'
 import TopNavigation from './TopNavigation'
+import { NavLink } from 'react-router-dom';
 
 
 export default class SideNavigation extends React.Component {
@@ -41,8 +42,8 @@ export default class SideNavigation extends React.Component {
                   <li>NYSLA</li>
                 </CollapsibleItem>
                 <CollapsibleItem header='Departments'>
-                  <li>Credit</li>
-                  <li>Finance</li>
+                  <li className="active-link"><NavLink to="/credit">Credit</NavLink></li>
+                  <li className="active-link"><NavLink to="/finance">Finance</NavLink></li>
                   <li>Human Resources</li>
                   <li>Marketing</li>
                   <li>MIS</li>

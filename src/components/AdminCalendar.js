@@ -108,6 +108,7 @@ export default class AdminCalendar extends React.Component {
       <div className="calendar-outter-container">
         <div className="calendar-inner-container">
           <h5>Welcome {this.props.currentUser.firstname}</h5>
+          <p>Add events to the calendar by clicking on an empty day on the <br/> calendar. Edit an event after you have created it, by clicking on the<br/> event when it appears on the calendar. </p>
           {this.state.addEventModal ?
                <Modal
                  closeOnOuterClick={true}

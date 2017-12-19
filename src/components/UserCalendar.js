@@ -44,6 +44,7 @@ export default class UserCalendar extends React.Component {
     return(
     <div className="calendar-outter-container">
         <div className="calendar-inner-container">
+          <h5>Holiday Calendar</h5>
           <BigCalendar
            popup
            selectable
